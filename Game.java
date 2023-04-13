@@ -1,3 +1,7 @@
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -183,6 +187,24 @@ private boolean playAgain() {
         String input = scanner.nextLine();
         return input.equalsIgnoreCase("y");
 }
+
+
+//create method to play sound
+    public void playWinSound(){ //new pub method
+        try { // try-catch block
+            // create new Audio obj from file
+            // create new clip obj to hold audio clip
+            AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("win_sound.wav"));
+
+            Clip clip = AudioSystem.getClip();
+            //open the clip with AudioInputStream
+            clip.open(inputStream);
+            //start playing the clip
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
