@@ -24,16 +24,23 @@ public void play() {
         // welcome message
     System.out.println("Welcome to Rock-Paper-Scissors!");
 
+    //prompt user to enter name for player 1
+    System.out.println("Enter name for Player 1:");
+    String player1Name = scanner.nextLine();
+    player1 = new HumanPlayer(player1Name);
+
     // init var to get selected Game Mode
     int gameMode = selectGameMode();
 
     //conditionals to check which game mode is chosen
     if (gameMode == 1) {
-        player1 = new HumanPlayer();
-        player2 = new HumanPlayer();
+        System.out.println("Enter name for Player 2:");
+        String player2Name = scanner.nextLine();
+        player2 = new HumanPlayer(player2Name);
+
     } else {
-        player1 = new HumanPlayer();
-        player2 = new Computer();
+        
+        player2 = new Computer("Computer");
     }
 
     while (true) {

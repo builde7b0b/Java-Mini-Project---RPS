@@ -7,7 +7,7 @@ public class HumanPlayer extends Player {
         public HumanPlayer(String name) {
                 scanner = new Scanner(System.in);
                 this.name = name;
-                
+
                 // set to keyboard by default
                 // create a new scanner to read from the keyboard essentially
         }
