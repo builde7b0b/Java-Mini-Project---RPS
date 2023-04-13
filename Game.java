@@ -111,8 +111,18 @@ private String choiceToString(int choice){
 }
 
 
-public void winner(int choice1, int choice2) {
-        
+public int winner(int choice1, int choice2) {
+        if (choice1 == choice2) {
+            return 0; //Tie
+        } else if (choice1 == 1 && choice2 == 3 ||
+                choice1 == 2 && choice2 == 1 ||
+                choice1 == 3 && choice2 == 2){
+            return 1; // player 1 wins
+        } else {
+            return -1; //  player 2 wins
+        }
+
+
 
 }
 
