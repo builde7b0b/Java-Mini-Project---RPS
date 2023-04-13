@@ -20,7 +20,7 @@ public class Game implements GameInterface {
     }
 
 public void play() {
-    scanner = new Scanner(System.in); // initialize the scanner object
+
         // welcome message
     System.out.println("Welcome to Rock-Paper-Scissors!");
 
