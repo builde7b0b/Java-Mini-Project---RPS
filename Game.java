@@ -39,7 +39,7 @@ public void play() {
         player2 = new HumanPlayer(player2Name);
 
     } else {
-        
+
         player2 = new Computer("Computer");
     }
 
@@ -48,7 +48,12 @@ public void play() {
         int choice2 = player2.choose();
 
         System.out.printf("%s chose %s%n", player1.getName(), choiceToString(choice1));
-        System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
+        if (player2 instanceof Computer) {
+            System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
+        } else {
+            System.out.printf("%s chose %s%n", player2.getName());
+        }
+
 
 
         int result = winner(choice1, choice2);
