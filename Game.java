@@ -57,6 +57,9 @@ public void play() {
         if (!playAgain()) {
             break;
         }
+
+
+
     }
 
     scanner.close();
@@ -131,6 +134,12 @@ public int winner(int choice1, int choice2) {
 
 
 
+}
+
+private boolean playAgain() {
+        System.out.println("Play again? (y/n)");
+        String input = scanner.nextLine();
+        return input.equalsIgnoreCase("y");
 }
 
 
