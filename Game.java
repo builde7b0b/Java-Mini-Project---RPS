@@ -42,6 +42,7 @@ public void play() {
 
         player2 = new Computer("Computer");
     }
+    System.out.println(player2.getName());
 
     while (true) {
         int choice1 = player1.choose();

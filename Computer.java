@@ -15,6 +15,12 @@ public class Computer extends Player{
 
     }
 
+    public String getName() {
+        return name;
+
+    }
+
+
 
     public void getChoice() {
 

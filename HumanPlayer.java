@@ -5,6 +5,7 @@ public class HumanPlayer extends Player {
         private String name;
 
         public HumanPlayer(String name) {
+                super(name);
                 scanner = new Scanner(System.in);
                 this.name = name;
 
