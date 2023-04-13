@@ -4,7 +4,9 @@ public class Computer extends Player{
     private String name;
 
     public Computer(String name){
+
         super(name);
+        this.name = name;
 
     }
 

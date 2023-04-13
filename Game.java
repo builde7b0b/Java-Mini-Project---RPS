@@ -52,7 +52,7 @@ public void play() {
         if (player2 instanceof Computer) {
             System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
         } else {
-            System.out.printf("%s chose %s%n", player2.getName());
+            System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
         }
 
 
