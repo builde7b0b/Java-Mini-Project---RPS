@@ -21,8 +21,8 @@ public class Game implements GameInterface {
 public void play() {
         // welcome message
     System.out.println("Welcome to Rock-Paper-Scissors!");
-    //select game mode
-    System.out.println("Please Select Game mode:");
+
+
         // player vs player
         // OR
          //player vs computer
@@ -44,6 +44,19 @@ public void play() {
 
 
 }
+
+
+private int SelectGameMode() {
+    //select game mode - create method
+    System.out.println("Please Select Game mode:");
+    System.out.println("1. Two Players");
+    System.out.println("2. Player vs Computer");
+    // inst var for gamemode
+    int gameMode = scanner.nextInt();
+    scanner.nextLine();
+    return gameMode;
+}
+
 
 public void winner() {
 
