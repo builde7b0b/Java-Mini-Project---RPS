@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Computer extends Player{
     private String name;
 
@@ -7,8 +9,10 @@ public class Computer extends Player{
     }
 
     public int choose() {
+        Random random = new Random();
+        return random.nextInt(3) + 1;
 
-        return 0;
+
     }
 
 
