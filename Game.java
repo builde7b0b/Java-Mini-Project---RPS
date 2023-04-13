@@ -104,6 +104,13 @@ System.out.print(resultString);
 
 }
 
+public void displayHistory() {
+        System.out.println("Game History:");
+        for (String resultString : history) {
+            System.out.println(resultString);
+        }
+}
+
     @Override
     public void winner() {
 
