@@ -34,6 +34,31 @@ public void play() {
         player2 = new Computer();
     }
 
+    while (true) {
+        int choice1 = player1.choose();
+        int choice2 = player2.choose();
+
+        System.out.println("%s chose %s%n", player1.getName(), choiceToString(choice1));
+        System.out.println("%s chose %s%n", player2.getName(), choiceToString(choice2));
+
+        int result = winner(choice1, choice2);
+
+        if (result == 0) {
+            System.out.println("It's a tie!");
+
+        } else if (result == 1) {
+            System.out.printf("%s wins!%n", player1.getName());
+        } else {
+            System.out.printf("%s wins! %n", player2.getName());
+        }
+
+        if (!playAgain()) {
+            break;
+        }
+    }
+
+    scanner.close()
+
 
         // player vs player
         // OR
