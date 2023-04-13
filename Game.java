@@ -7,15 +7,40 @@ public class Game implements GameInterface {
 
     private Player player1;
     private Player player2;
-    private Scanner scanner; // get user input from the console.
+    private Scanner scanner; // inst var, get user input from the console.
     //Scanner class lets us read input from many sources
 
 
     public Game() {
         scanner = new Scanner(System.in);
+        // System.in is an InputStream
+        // set to keyboard by default
+        // create a new scanner to read from the keyboard essentially
     }
-    
+
 public void play() {
+        // welcome message
+    System.out.println("Welcome to Rock-Paper-Scissors!");
+    //select game mode
+    System.out.println("Please Select Game mode:");
+        // player vs player
+        // OR
+         //player vs computer
+    //Game Logic to Determine Choices and Winners
+    // some sort of loop
+    // player1 choice =
+    // player2 choice =
+    // print choices
+    // check Results -
+    // determine winners
+        //conditional statements
+        // if both players choose the same choice
+            // tie
+        // else if player one has the winning symbol
+            // print winner
+        // else
+            // print the other player won
+    //reset game
 
 
 }
