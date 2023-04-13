@@ -97,12 +97,22 @@ private int selectGameMode() {
 
 //create method to convert the choice input to a string
     // its represented as an int
-private void choiceToString(int choice){
-
+private String choiceToString(int choice){
+        switch (choice) {
+            case 1:
+                return "rock";
+            case 2:
+                return "paper";
+            case 3:
+                return "scissors";
+            default:
+                return "";
+        }
 }
 
 
-public void winner() {
+public void winner(int choice1, int choice2) {
+        
 
 }
 
