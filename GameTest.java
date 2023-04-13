@@ -1,5 +1,9 @@
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import javax.sound.sampled.Clip;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 /**
@@ -20,12 +24,23 @@ public class GameTest {
 
 
     @Test
-    public void testPlay(){
+    public void testPlay() {
 
     }
 
     @Test
-    public void testSelectGameMode(){
+    public void testSelectGameMode() {
 
     }
+
+    @Test
+    public void testPlayWinSound() {
+        Game game = new Game();
+        game.playWinSound();
+        Clip clip = game.getClip();
+        assertTrue(clip.isRunning(), "The sound clip should be running");
+    }
 }
+
+
+
