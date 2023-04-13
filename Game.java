@@ -22,6 +22,18 @@ public void play() {
         // welcome message
     System.out.println("Welcome to Rock-Paper-Scissors!");
 
+    // init var to get selected Game Mode
+    int gameMode = selectGameMode();
+
+    //conditionals to check which game mode is chosen
+    if (gameMode == 1) {
+        player1 = new HumanPlayer();
+        player2 = new HumanPlayer();
+    } else {
+        player1 = new HumanPlayer();
+        player2 = new Computer();
+    }
+
 
         // player vs player
         // OR
@@ -46,7 +58,7 @@ public void play() {
 }
 
 
-private int SelectGameMode() {
+private int selectGameMode() {
     //select game mode - create method
     System.out.println("Please Select Game mode:");
     System.out.println("1. Two Players");
