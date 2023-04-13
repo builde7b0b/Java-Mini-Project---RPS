@@ -5,8 +5,9 @@ public class Game implements GameInterface {
     // we don't need many interfaces if any for now
 // added interface for Game class to improve encapsulation
 
-    private Player player1;
+    private HumanPlayer player1;
     private Player player2;
+
     private Scanner scanner; // inst var, get user input from the console.
     //Scanner class lets us read input from many sources
 
@@ -38,8 +39,9 @@ public void play() {
         int choice1 = player1.choose();
         int choice2 = player2.choose();
 
-        System.out.println("%s chose %s%n", player1.getName(), choiceToString(choice1));
-        System.out.println("%s chose %s%n", player2.getName(), choiceToString(choice2));
+        System.out.printf("%s chose %s%n", player1.getName(), choiceToString(choice1));
+        System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
+
 
         int result = winner(choice1, choice2);
 
@@ -57,7 +59,7 @@ public void play() {
         }
     }
 
-    scanner.close()
+    scanner.close();
 
 
         // player vs player
@@ -82,8 +84,13 @@ public void play() {
 
 }
 
+    @Override
+    public void winner() {
 
-private int selectGameMode() {
+    }
+
+
+    private int selectGameMode() {
     //select game mode - create method
     System.out.println("Please Select Game mode:");
     System.out.println("1. Two Players");
@@ -110,7 +117,7 @@ private String choiceToString(int choice){
         }
 }
 
-
+    @Override
 public int winner(int choice1, int choice2) {
         if (choice1 == choice2) {
             return 0; //Tie

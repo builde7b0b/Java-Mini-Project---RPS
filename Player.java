@@ -7,7 +7,7 @@ public abstract class Player {
 
     }
 
-    public abstract void choose();
+    public abstract int choose();
 
     public abstract void getChoice();
 
