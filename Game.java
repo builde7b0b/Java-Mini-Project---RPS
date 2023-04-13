@@ -70,6 +70,13 @@ private int selectGameMode() {
 }
 
 
+//create method to convert the choice input to a string
+    // its represented as an int
+private void choiceToString(int choice){
+
+}
+
+
 public void winner() {
 
 }
