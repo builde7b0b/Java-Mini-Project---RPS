@@ -17,6 +17,7 @@ private ArrayList<String> history;
 
     public Game() {
         scanner = new Scanner(System.in);
+        history = new ArrayList<String>();
         // System.in is an InputStream
         // set to keyboard by default
         // create a new scanner to read from the keyboard essentially
@@ -51,12 +52,11 @@ public void play() {
         int choice1 = player1.choose();
         int choice2 = player2.choose();
 
-        System.out.printf("%s chose %s%n", player1.getName(), choiceToString(choice1));
-        if (player2 instanceof Computer) {
-            System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
-        } else {
-            System.out.printf("%s chose %s%n", player2.getName(), choiceToString(choice2));
-        }
+        String resultString = String.format("%s chose %s and %s chose %s", player1.getName(), choiceToString(choice1),
+                player2.getName(), choiceToString(choice2));
+history.add(resultString);
+
+System.out.print(resultString);
 
 
 
