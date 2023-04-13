@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class Game implements GameInterface {
 
@@ -11,7 +13,7 @@ public class Game implements GameInterface {
 
     private Scanner scanner; // inst var, get user input from the console.
     //Scanner class lets us read input from many sources
-
+private ArrayList<String> history;
 
     public Game() {
         scanner = new Scanner(System.in);

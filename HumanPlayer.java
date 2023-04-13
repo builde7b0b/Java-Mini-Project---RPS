@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
@@ -15,11 +16,20 @@ public class HumanPlayer extends Player {
         public int choose() {
                 //prompt user for choice
                 System.out.println("Enter 1 for rock, 2 for paper, and 3 for scissors");
-                int choice = scanner.nextInt();
-
-                while (choice < 1 || choice > 3) {
-                        System.out.println("Invalid choice. Please enter a valid option");
-                        choice = scanner.nextInt();
+                int choice = 0;
+                boolean validInput = false;
+                while (!validInput) {
+                        try {
+                                choice = scanner.nextInt();
+                                while (choice < 1 || choice > 3) {
+                                        System.out.println("Invalid choice. Please enter a valid option");
+                                        choice = scanner.nextInt();
+                                }
+                                validInput = true;
+                        } catch (InputMismatchException e) {
+                                System.out.println("Invalid input. Please enter a number");
+                                scanner.nextLine();
+                        }
                 }
                 return choice;
 
