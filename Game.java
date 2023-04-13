@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game implements GameInterface {
@@ -108,13 +109,31 @@ public void play() {
 
 
     private int selectGameMode() {
+        //handle invalid input and exceptions
+
     //select game mode - create method
     System.out.println("Please Select Game mode:");
     System.out.println("1. Two Players");
     System.out.println("2. Player vs Computer");
     // inst var for gamemode
-    int gameMode = scanner.nextInt();
-    scanner.nextLine();
+    int gameMode = 0;
+    boolean validInput = false;
+
+    while (!validInput) {
+        try {
+            gameMode = scanner.nextInt();
+            scanner.nextLine();
+            if (gameMode == 1 || gameMode == 2) {
+                validInput = true;
+            } else {
+                System.out.println("Invalid input. Please enter 1 or 2.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a number");
+            scanner.nextLine();
+        }
+    }
+//    scanner.nextLine();
     return gameMode;
 }
 
