@@ -1,4 +1,4 @@
-public class Game {
+public class Game implements GameInterface {
 
     // we don't need many interfaces if any for now
 // added interface for Game class to improve encapsulation
@@ -8,7 +8,7 @@ public class Game {
 
 public void play() {
 
-    
+
 }
 
 public void winner() {

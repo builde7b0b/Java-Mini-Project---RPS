@@ -4,4 +4,9 @@ public abstract class Player {
     public void getName() {
 
     }
+
+    public abstract void choose();
+
+    public abstract void getChoice();
+
 }
